@@ -28,6 +28,10 @@ public with sharing class Customer {
 
     }
 
+    public void accs () {
+        Account accs = new Account();
+    }
+
     //Inner class of the class Customer
     public class Address {
 
