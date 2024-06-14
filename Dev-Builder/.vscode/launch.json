@@ -5,12 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Apex Replay Debugger",
-      "type": "apex-replay",
+      "name": "Launch Apex Debugger",
+      "type": "apex",
       "request": "launch",
-      "logFile": "${command:AskForLogFileName}",
-      "stopOnEntry": true,
-      "trace": true
+      "userIdFilter": [],
+      "requestTypeFilter": [],
+      "entryPointFilter": "",
+      "salesforceProject": "${workspaceRoot}"
     }
   ]
 }
