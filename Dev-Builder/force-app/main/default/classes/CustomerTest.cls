@@ -1,6 +1,6 @@
-/*
+/** 
 *@author Bruno Moreira
-**/
+*/
 @isTest
 public with sharing class CustomerTest {
     
