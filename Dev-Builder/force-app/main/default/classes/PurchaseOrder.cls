@@ -19,28 +19,42 @@ public class PurchaseOrder {
 
         this.items = new List<Item> ();
         this.needByDate = Date.today().addDays(7);
-        this.purchaseOrderNumber = '1234567890';
 
     }
 
     public PurchaseOrder(String purchaseOrderNumber
-                        , Account account
-                        , Date needByDate) {
+                        , Account account) {
 
         this();
-        this.purchaseOrderNumber = purchaseOrderNumber;
+
         this.account = account;
-        this.needByDate = needByDate;
+        this.purchaseOrderNumber = purchaseOrderNumber;
 
     }
 
     public PurchaseOrder(String purchaseOrderNumber
                         , Account account
-                        , Date needByDate
                         , Address billingAdress) {
 
-        this(purchaseOrderNumber, account, needByDate);
+        this(purchaseOrderNumber, account);
         this.billingAdress = billingAdress;
+
+    }
+
+    public PurchaseOrder(String purchaseOrderNumber
+                       , Account account
+                       , Address billingAdress
+                       , Address shippingAdress) {
+
+        this(purchaseOrderNumber, account, billingAdress);
+        this.shippingAdress = shippingAdress;
+
+    }
+
+    public PurchaseOrder(Account account, List<item> items) {
+
+        this.account = account;
+        this.items = items;
 
     }
 
