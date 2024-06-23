@@ -67,12 +67,52 @@ public class PurchaseOrder {
         public String productCode;
         public String description;
         public String PricebookEntryId;
-        public String quantity;
-        public String price;
+        public Decimal quantity;
+        public Decimal price;
 
         public Item withId(String Id) {
             
             this.Id = Id;
+
+            return this;
+
+        }
+
+        public Item withProductCode(String productCode) {
+
+            this.productCode = productCode;
+
+            return this;
+
+        }
+
+        public Item withDescription(String description) {
+
+            this.description = description;
+
+            return this;
+
+        }
+
+        public Item withPriceBookEntryId(String PriceBookEntryId) {
+
+            this.PricebookEntryId = PriceBookEntryId;
+
+            return this;
+
+        }
+
+        public Item withQuantity(Decimal quantity) {
+
+            this.quantity = quantity;
+
+            return this;
+
+        }
+
+        public Item withPrice(Decimal price) {
+
+            this.price = price;
 
             return this;
 
